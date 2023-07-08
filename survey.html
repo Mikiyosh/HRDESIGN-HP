@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Open+Sans:wght@400;700&family=Questrial&family=Roboto:wght@400;500&family=Wix+Madefor+Text:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto:ital,wght@0,300;0,400;1,400&family=Sigmar&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body,
+        html {
+            color: #333333;
+            font-size: 1.8px;
+            width: 1200px;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: 'Heebo', 'Montserrat', sans-serif, YuGothic, Yu Gothic;
+
+
+
+        }
+
+        a {
+            color: black;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-decoration: none;
+        }
+
+        p {
+            font-family: ' Heebo-Regular', 'Heebo', 'Montserrat', sans-serif;
+
+        }
+
+        .efe-parent {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin: 0 0 0 0;
+            font-family: 'Heebo', 'Red Hat Display', 'Wix Madefor Text', sans-serif, 'Montserrat', sans-serif;
+            text-align: left;
+            color: #000080;
+        }
+
+
+        .efe {
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 1280px;
+            height: 540px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px 0 0;
+        }
+
+        .efe video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .letters1,
+        .letters2,
+        .letters3 {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+
+        .letters1 {
+            width: 550px;
+            color: white;
+            font-weight: bold;
+            margin: 0 0 0 0;
+            font-size: 36px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            margin: 0 0 10px 30px;
+            padding: 0 0 0 20px;
+        }
+
+        .letters2 {
+            width: 550px;
+            color: black;
+            font-weight: bold;
+            margin: 0 0 0 30px;
+            font-size: 40px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            background-color: white;
+            padding: 0 0 0 20px;
+        }
+
+        .letters3 {
+            width: 450px;
+            color: white;
+            font-weight: bold;
+            margin: 0 0 5px 30px;
+            font-size: 28px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            padding: 20px 0 0 20px;
+
+        }
+
+        .se_cons {
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        .nav_box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 999;
+            font-size: 14px;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 10px 0 0;
+        }
+
+        .nav_box_list {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            list-style: none;
+        }
+
+        .with_dropdown .dropdown_menu {
+            width: 500px;
+            margin-top: 0;
+            right: 0;
+            /* 画面の右端に配置 */
+            left: auto;
+            /* 左位置をリセット */
+            opacity: 0.5;
+            /* 透明度を指定（0に近いほど透明になる） */
+        }
+
+        .nav_items {
+            padding: 0 20px 0 0;
+            font-weight: bold;
+        }
+
+        .nav_items.with_dropdown:hover .dropdown_menu {
+            display: block;
+            /* 幅を500pxに指定 */
+            margin-top: 0;
+            height: auto;
+            white-space: nowrap;
+            opacity: 0.9;
+        }
+
+
+        .nav_items a:hover {
+            color: inherit !important;
+            /* 継承された文字色を適用 */
+            text-decoration: none !important;
+            /* 下線を削除 */
+            border: none !important;
+            /* 枠を削除 */
+        }
+
+
+
+        .with_dropdown:hover .dropdown_menu {
+            display: block;
+            height: auto;
+            list-style: none;
+            opacity: 1;
+        }
+
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            /* 画面の右端に配置 */
+            padding: 0;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            white-space: nowrap;
+            width: 500px;
+            /* 幅を500pxに指定 */
+
+        }
+
+
+        .dropdown_menu li {
+            padding: 10px;
+            width: max-content;
+            /* リストアイテムの幅をコンテンツに合わせる */
+            list-style: none;
+        }
+
+
+        .nav_items.logo {
+            margin-right: auto;
+            /* Pushes the logo to the left */
+        }
+
+
+        .nav_list {
+            list-style-type: none;
+            border-bottom: none;
+        }
+
+        .nav_items.logo img {
+            width: 180px;
+            /* Adjust the width as needed */
+            height: auto;
+        }
+
+
+        .nav_items2 {
+            margin: 0 20px 0 20px;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .nav_items2 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact_link {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 50% / 100%;
+            background-color: #191970;
+            color: white;
+        }
+
+        .nav_items a {
+            text-decoration: none;
+        }
+
+
+        .seemore {
+            font-weight: none;
+            font-size: 10px;
+
+        }
+
+
+        .se_wrapper {
+            width: 1280px;
+            height: 1500px;
+            padding: 80px 0 50px 0;
+            margin: auto;
+            line-height: 1;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
+
+
+        .se_wrapper2 {
+            width: 1280px;
+            height: 400px;
+            padding: 80px 0 50px 0;
+            margin: auto;
+            line-height: 1;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
+
+        .con_wrapper {
+            width: 1280px;
+            height: 500px;
+            background-color: #EEEEEE;
+            padding: 80px 0 30px 0;
+            text-align: center;
+            margin: auto;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+            max-width: 960px;
+            padding: 0 0 80px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .con_wrapper2 {
+            width: 1280px;
+            height: 500px;
+            background-color: #EEEEEE;
+            padding: 80px 0 30px 0;
+            text-align: center;
+            margin: auto;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+            max-width: 960px;
+            padding: 0 0 80px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .setit {
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+
+        .nav_items:nth-child(4) a:hover {
+
+            border: 2px solid 000080;
+            background-color: white;
+            color: #000080;
+            border: 1px solid #000080;
+            ;
+        }
+
+
+        .new_title {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+            padding: 100px 0;
+        }
+
+        .new_sub {
+            margin: 0 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .btn {
+            width: 214px;
+            background-color: #aaa;
+            color: #ffffff;
+            font-size: 21px;
+            display: block;
+            margin: auto;
+            padding: 20px 0 20px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: black;
+            /* カーソルを合わせたときのスタイル */
+        }
+
+
+        .news_wrapper {
+            max-width: 960px;
+            margin: auto;
+            text-align: center;
+            padding: 0 0 48px;
+            display: flex;
+
+        }
+
+
+        .news_list {
+            display: flex;
+            margin: 0 0 56px;
+        }
+
+        .news_items {
+            width: 33.333%;
+            padding: 0 32px 0;
+        }
+
+
+
+        .acdiv {
+            padding: 0 0 20px;
+        }
+
+        .ac_subtub {
+            margin: 0 0 60px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+
+        .ac_title {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+            padding: 40px 0;
+        }
+
+        .ac_sub {
+            padding: 20px 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .map {
+            width: 100%;
+            padding: 0 0 0;
+            height: 300px;
+
+        }
+
+        .ac_detail {
+
+            font-size: 14px;
+            padding: 20px 20px 0 25px;
+            color: #ffffff;
+            margin: 0 0 20px 30px;
+        }
+
+        .ac_detail2 {
+            font-size: 14px;
+            margin: 0 0 30px 0;
+            color: #ffffff;
+        }
+
+        .schoolname {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .ac_table {
+            margin: auto;
+        }
+
+
+
+        table {
+            margin: 40px auto 0;
+            font-size: 16px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+
+        th {
+            text-align: left;
+        }
+
+
+
+        .form-wrapper {
+            width: 640px;
+            margin: auto;
+        }
+
+
+
+
+        .con_title {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+            padding: 80px 20px 0 0;
+
+        }
+
+        .us {
+            font-size: 40px;
+            font-weight: bold;
+            color: #f0c20b;
+            display: inline-block;
+            padding: 60px 0;
+            font-style: italic;
+
+        }
+
+        .con_sub {
+            margin: 0 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .condet {
+            margin: 0 0 32px;
+            font-size: 16px;
+        }
+
+        .condet2 {
+            margin: 0 0 0px;
+            font-size: 16px;
+        }
+
+        .form-inner {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+            margin: auto;
+        }
+
+        .form-title {
+            width: 112px;
+            padding: 8px 0 0 0;
+            margin: 0 120px 24px 0;
+            font-weight: bold;
+            text-align: right;
+
+        }
+
+        .form-title.check-radio {
+            padding: 0;
+        }
+
+        .form-item {
+            width: 400px;
+        }
+
+        .form-parts {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border: solid 1px #c9c9c9;
+            font-size: 16px;
+            margin: auto;
+
+        }
+
+        input[type*="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 16px;
+            height: 16px;
+            margin: 0 10px 0 0;
+            border: solid 1px #a0a0a0;
+            border-radius: 50%;
+
+        }
+
+
+        .btn-submit {
+            border: non;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 214px;
+            background-color: #aaa;
+            color: #ffffff;
+            font-size: 21px;
+            display: block;
+            margin: auto;
+            padding: 20px 0 20px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .radio-colum {
+
+            display: flex;
+            padding: 0 0 10px;
+            text-align: left;
+            line-height: 3;
+
+
+            flex-direction: column;
+
+        }
+
+        .submit_box {
+            padding: 20px 0 20px;
+        }
+
+
+
+
+
+        /*---------------------------
+footer*
+-----------------------------------*/
+
+
+        .copyrights {
+            text-align: center;
+            color: #ffffff;
+
+        }
+
+        .footer .bwrapper {
+            position: relative;
+        }
+
+        .icon-up {
+            color: #fff;
+            font-size: 24px;
+            display: block;
+            padding: 10px 0;
+            display: block;
+            width: bold;
+
+        }
+
+
+        .btn-top {
+            position: absolute;
+            top: -90px;
+            right: 0;
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #707070;
+        }
+
+
+
+
+        /* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+
+        span:nth-child(1) {
+            animation-delay: 0.1s;
+            -webkit-animation-delay: 0.1s;
+        }
+
+
+
+        .ab_box {
+
+            padding: 60px 0 40px;
+        }
+
+        .ab_box img {
+            width: 640px;
+            height: auto;
+            margin: auto;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .btn {
+            width: 640px;
+            font-size: 1.6rem;
+        }
+
+        .photo-container {
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 0 0;
+        }
+
+        .photo1,
+        .photo2,
+        .photo3,
+        .photo4 {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-right: 10px;
+
+        }
+
+        .photo2 {
+            margin-top: 50px;
+        }
+
+        .photo3 {
+            margin-top: 100px;
+        }
+
+        .photo4 {
+            margin-top: 150px;
+        }
+
+        .photo-container2 {
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 0 0;
+        }
+
+        .photo5,
+        .photo6,
+        .photo7,
+        .photo8 {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-right: 20px;
+        }
+
+        .photo1 img,
+        .photo2 img,
+        .photo3 img,
+        .photo4 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+
+        .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .photo1:hover .caption,
+        .photo2:hover .caption,
+        .photo3:hover .caption,
+        .photo4:hover .caption {
+            opacity: 1;
+        }
+
+
+        .boxde {
+            font-size: 20px;
+            font-weight: bold;
+            color: #191970;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 10px 0 0 0;
+
+        }
+
+        .boxde2 {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 10px 0 0 0;
+        }
+
+        .boxdes {
+            font-size: 14px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
+
+        }
+
+        .boxdetit2 {
+            font-size: 10px;
+            font-weight: bold;
+            color: #191970;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
+        }
+
+        .boxdes2 {
+            font-size: 14px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
+        }
+
+        .ac_box {
+            width: 1280px;
+            font-size: 16px;
+            text-align: left;
+            background-color: #191970;
+            font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
+
+        .ac_tb {
+            color: #ffffff;
+            display: flex;
+            margin: 50px 0 0 0;
+        }
+
+        .seemore {}
+
+        .btm {
+            padding: 100px 50px 0 150px;
+            margin-right: 10px;
+            border-right: 1px solid #fff;
+            height: 150px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-box {
+            width: 50mm;
+            height: 10mm;
+            background-color: #191970;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            line-height: 10mm;
+            cursor: pointer;
+        }
+
+        .contact-box:hover {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid black;
+            /* カーソルが当たった時に枠線を表示する */
+        }
+
+        .is_wrapper {
+            background-color: #EEEEEE;
+            text-align: center;
+            height: 400px;
+            padding: 80px 0 100px 0;
+        }
+
+        .issues {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 180px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 100px 25px 0 25px;
+            padding: 0 10px 0 10px;
+        }
+
+        .issue {
+            font-weight: bold;
+        }
+
+        .arrow-icon {
+            width: 0;
+            height: 50px;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-top: 40px solid #c0c0c0;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        .come {
+            margin: -50px 0 0 0;
+        }
+
+        .balloon-003 {
+            height: 150px;
+            align-items: center;
+            position: relative;
+            max-width: 300px;
+            margin-left: 15px;
+            padding: .8em 1.2em;
+            border-radius: 5px;
+            background-color: #fafafa;
+            font-size: 14px;
+            box-shadow: 0px 0px 10px #000000;
+        }
+
+        .bl {
+            color: #191970;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+
+        }
+
+        .balloon-003::before {
+            position: absolute;
+            right: -15px;
+            width: 15px;
+            height: 30px;
+            background-color: #fafafa;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            content: '';
+        }
+
+        .balloon-004 {
+            height: 150px;
+            align-items: center;
+            position: relative;
+            max-width: 300px;
+            margin-left: 15px;
+            padding: .8em 1.2em;
+            border-radius: 5px;
+            background-color: #fafafa;
+            font-size: 14px;
+            box-shadow: 0px 0px 10px #000000;
+        }
+
+        .balloon-004::before {
+            position: absolute;
+            left: -15px;
+            width: 15px;
+            height: 30px;
+            background-color: #fafafa;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            content: '';
+        }
+
+        .cir {
+            display: flex;
+            margin: 0 0 0 150px;
+        }
+
+        .value-chain-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 150px 0 150px;
+        }
+
+        .phase {
+            flex: 1;
+            height: 280px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f2f2f2;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .phase:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .phase::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #f2f2f2;
+        }
+
+        .phase-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0 10px 0;
+        }
+
+        .phase-content {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .phase:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-out;
+        }
+
+        .scon {
+            font-size: 18px;
+            font-weight: bold;
+            color: #191970;
+            margin: 15px 0 0 0;
+            padding: 0 0 10px 0;
+        }
+
+        .scons {
+            font-size: 12px;
+            margin: 0 0 0 0;
+            padding: 0 0 10px 0;
+            font-family: 游ゴシック体;
+            line-height: 1.5;
+        }
+
+        .co_wrapper {
+            width: 1280px;
+            height: 500px;
+            background-color: #EEEEEE;
+            padding: 80px 0 30px 0;
+            text-align: center;
+            margin: auto;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
+
+        .solution {
+            margin-top: 50px;
+            margin: 100px 0 0 0;
+            text-align: center;
+            font-weight: bold;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="nav_box_wrapper">
+            <nav class="nav_box">
+                <ul class="nav_box_list">
+                    <li class="nav_items logo"><img src="img/logo.png" alt="Logo"></li>
+                    <li class="nav_items with_dropdown">
+                        <a href="#OURSERVICES">Our services</a>
+                        <ul class="dropdown_menu">
+                            <li><a href="#OURSERVICES">MVV策定/インナーブランディング支援</a></li>
+                            <li><a href="#OURSERVICES">人事戦略策定・運用支援</a></li>
+                            <li><a href="#OURSERVICES">社内大学構築・企業内研修実施</a></li>
+                            <li><a href="#OURSERVICES">スタートアップ人事支援</a></li>
+                            <li><a href="ourservices.html" class="seemore">see more</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_items with_dropdown">
+                        <a href="#SOLUTION">About</a>
+                        <ul class="dropdown_menu">
+                            <li><a href="#COMPANY">会社概要</a></li>
+                            <li><a href="#">MVV</a></li>
+                            <li><a href="#">代表挨拶</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_items"><a href="#COLUM">Colum</a></li>
+                    <li class="nav_items2 contact_link"><a href="#CONTACTUS">Contact us</a></li>
+                    <li class="nav_items"><a href="#CONTACT">English(US)</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--top-->
+        <div class="efe">
+            <video src="img/mainmovie2.mp4" autoplay loop muted></video>
+
+            <p class="letters1">組織総合診断による組織の処方箋</p>
+
+            <p class="letters3">Choose a partner who can do more than just criticism.</p>
+        </div>
+
+
+
+
+        <main>
+            <div id="OURSERVICES" class="se_wrapper">
+                <div class="is_wrapper">
+
+                    <p class="issue">こんなお困りごとはありませんか？</p>
+
+                    <div class="photo-container2">
+                        <div class="come">
+                            <p class="issues">『人事戦略って何から手をつけていいかわからない』</p>
+                            <img src="img/hr.png" alt="" width="150px" style="padding-left: 180px;">
+                        </div>
+
+                        <div class="come">
+                            <p class="issues">『優秀な人材がすぐ辞めていってしまう』</p>
+                            <img src="img/man.png" alt="" width="150px" style="padding-left: 180px;">
+                        </div>
+
+                        <div class="come">
+                            <p class="issues">『色んな人事施策をやっているけど、果たして効果は出ているのかな？』</p>
+                            <img src="img/pre.png" alt="" width="150px" style="padding-left: 180px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow-icon"></div>
+
+                <div class="cir">
+                    <div class="balloon-003">
+                        <p class="bl">組織総合診断でのサーベイ実施</p>
+
+                        <p>✔エンゲージメントサーベイによる従業員のエンゲージメント指数の可視化</p>
+                        <p>✔現状の組織文化の可視化</p>
+                        <p>✔人的資本のデータ活用</p>
+                    </div>
+                    <div><img src="img/pc.png" alt="" width="300px" style="margin: auto;"></div>
+
+                    <div class="balloon-004">
+                        <p class="bl">サーベイ結果から戦略立案</p>
+
+                        <p>✔サーベイ結果をもとにあるべき姿の再定義</p>
+                        <p>✔解決すべき課題の特定</p>
+                        <p>✔解決策のアクションプランへのブレークダウン</p>
+                    </div>
+
+                </div>
+
+                <div class="arrow-icon"></div>
+
+
+
+                <div class="value-chain-container">
+                    <div class="phase">
+                        <h2 class="phase-title">フェーズ1</h2>
+                        <img src="img/survey1.jpg" alt="" width="200px" style="margin:auto;">
+                        <p class="scon">サーベイ回答</p>
+                        <p class="phase-content scons">従業員に対してサーベイを実施します。～</p>
+                    </div>
+                    <div class="phase">
+                        <h2 class="phase-title">フェーズ2</h2>
+                        <img src="img/survey2.jpg" alt="" width="200px" style="margin:auto;">
+                        <p class="scon">サーベイ結果分析</p>
+                        <p class="phase-content scons">部署、階層、男女別等の分析カット毎にサーベイの結果を割り出します。～</p>
+                    </div>
+                    <div class="phase">
+                        <h2 class="phase-title">フェーズ3</h2>
+                        <img src="img/survey3.jpg" alt="" width="200px" style="margin:auto;">
+                        <p class="scon">解決策の提案・実行</p>
+                        <p class="phase-content scons">サーベイにより浮き彫りになった課題の解決策を提案し、実行のための支援を行います。～</p>
+                    </div>
+                    <div class="phase">
+                        <h2 class="phase-title">フェーズ4</h2>
+                        <img src="img/survey4.jpg" alt="" width="200px" style="margin:auto;">
+                        <p class="scon">戦略・施策の効果測定</p>
+                        <p class="phase-content scons">施策実施の効果測定を行い、施策の高速PDCAを回します。同時に施策の運用レベルを上げるため</p>
+                    </div>
+                </div>
+
+                <p class="solution"></p>
+
+
+
+            </div>
+
+            <div id="CONTACT" class="se_wrapper2">
+                <div class="se_wrapper3">
+                    <p class="setit">Contact us</p>
+                    <P class="se_cons">
+                        HR メールでのご相談・お問合せ</P>
+
+                    <p class="se_cons">お問合せは以下のリンクフォームよりお気軽にご連絡ください。</p>
+                    <div class="contact-container">
+                        <div class="contact-box">CONTACT</div>
+                    </div>
+                    <p class="se_cons">お電話でのお問合せ</p>
+                    <div class="contact-container">
+                        <div class="contact-box">TEL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="COLUM" class="co_wrapper">
+                <div class="">
+                    <p class="setit">Column</p>
+                    <div class="photo-container2">
+                        <div class="photo5">
+                            <img src="img/colum.jpeg" alt="Photo 1">
+                            <p class="boxdetit2">＃キャリア自律</p>
+                            <p class="boxde2">キャリア自律時代の管理職のあるべき姿</p>
+                            <p class="boxdes2">キャリア自律の重要性が囁かれる近年、管理職としてのあるべき姿像も変化を遂げようとしている・・・＜続き＞</p>
+                        </div>
+                        <div class="photo6">
+                            <img src="img/colum2.jpg" alt="Photo 2">
+                            <p class="boxdetit2">＃MVV</p>
+                            <p class="boxde2">企業倫理と業績をトレードオフにさせないためのMVVの作り方</p>
+                            <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                        </div>
+                        <div class="photo7">
+                            <img src="img/colum4.jpeg" alt="Photo 1">
+                            <p class="boxdetit2">#チームビルディング</p>
+                            <p class="boxde2">スクラムチームビルディングでチームのエンゲージメントを向上</p>
+                            <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                        </div>
+                        <div class="photo7">
+                            <img src="img/colum3.jpeg" alt="Photo 1">
+                            <p class="boxdetit2">＃DX</p>
+                            <p class="boxde2">DX時代に必要なリスキリング</p>
+                            <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                            <a href="" class="seemore">see more</a>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+            <script>
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    var dropdowns = document.querySelectorAll('.with_dropdown');
+
+                    dropdowns.forEach(function (dropdown) {
+                        var link = dropdown.querySelector('a');
+                        var menu = dropdown.querySelector('.dropdown_menu');
+                        var isHovered = false;
+
+                        link.addEventListener('mouseenter', function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            isHovered = true;
+                            showMenu();
+                        });
+
+                        link.addEventListener('mouseleave', function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            isHovered = false;
+                            setTimeout(hideMenu, 200); // メニューがマウスから外れた場合に遅延してメニューを非表示にする
+                        });
+
+                        menu.addEventListener('mouseenter', function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            isHovered = true;
+                            showMenu();
+                        });
+
+                        menu.addEventListener('mouseleave', function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            isHovered = false;
+                            setTimeout(hideMenu, 200); // メニューがマウスから外れた場合に遅延してメニューを非表示にする
+                        });
+
+                        function showMenu() {
+                            if (isHovered) {
+                                menu.style.display = 'block';
+                            }
+                        }
+
+                        function hideMenu() {
+                            if (!isHovered) {
+                                menu.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+
+
+            </script>
+
+        </main>
+
+
+</body>
+
+<footer class="footer">
+    <!--access-->
+    <div>
+
+        <div id="access" class="ac_box">
+
+            <div class="ac_tb">
+
+                <div class="btm">
+                    <p>ABOUT US</p>
+                    <p>PROJECT</p>
+                    <p>CONTACT</p>
+                    <p>BLOG</p>
+                </div>
+
+
+                <table id="COMPANY" class="ac_detail">
+                    <tbody class="ac_detail2">
+                        <tr>
+                            <td>HR DESIGN INC.<br>（エイチアールデザイン株式会社）</td>
+                        </tr>
+                        <tr>
+                            <td>〒106-0045 港区麻布十番1-2-7 ラフィネ麻布十番701</td>
+                        </tr>
+                        <tr>
+                            <td>000-000-000</td>
+                        </tr>
+                        <tr>
+                            <td>999-999-9999</td>
+                        </tr>
+
+                        <tr>
+                            <td>info@hrdesign.co.jp</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+</footer>
+
+
+
+
+</body>
+
+</html>

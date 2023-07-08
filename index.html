@@ -24,7 +24,6 @@
             font-size: 1.8px;
             width: 1200px;
             padding: 0;
-            text-align: center;
             margin: 0;
             height: 100%;
 
@@ -32,7 +31,12 @@
 
         a {
             color: black;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-decoration: none;
+        }
+
+        p {
+            font-family: ' Heebo-Regular', 'Heebo', 'Montserrat', sans-serif;
 
         }
 
@@ -50,88 +54,103 @@
         .logo {
             font-size: 70px;
             margin: 0 0 0 0;
-            font-family: 'Red Hat Display', 'Wix Madefor Text', sans-serif, 'Montserrat', sans-serif;
+            font-family: 'Heebo', 'Red Hat Display', 'Wix Madefor Text', sans-serif, 'Montserrat', sans-serif;
             text-align: left;
             color: #000080;
-
         }
-
-        @font-face {
-            font-family: 'YuGothic';
-            src: url('path/to/yugothic.ttf') format('truetype');
-            /* フォントファイルへのパスを指定 */
-        }
-
-        .letters {
-            margin: 0 0 0 0;
-            font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
-            text-align: left;
-            color: #000080;
-
-        }
-
-        .ab_wrapper {
-            width: 1280px;
-            padding: 150px 0 50px 0;
-            text-align: center;
-            margin: auto;
-            font-size: 14px;
-            font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-        }
-
-
-        .ab_wrapper2 {
-            width: 1280px;
-            padding: 50px 0 50px 0;
-            text-align: center;
-            margin: auto;
-            font-size: 14px;
-            font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-
-        }
-
-        .ab_con {
-            max-width: 960px;
-            text-align: center;
-            margin: auto;
-            font-size: 24px;
-            font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-
-        }
-
 
 
         .efe {
-            font-size: 110px;
-            font-weight: bold;
-            color: #ffff;
-            background-color: #fff;
-            text-align: center;
-            background-image: url('../img/main.jpg');
             background-size: cover;
+            position: relative;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            /* 画像を固定 */
             width: 1280px;
             height: 540px;
-            text-align: center;
-            color: azure;
             display: flex;
             justify-content: center;
-            align-items: center;
             flex-direction: column;
             padding: 20px 0 0;
-            text-shadow: 1px 1px 2px #ffffff;
+        }
+
+        .efe video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            /* 既存のスタイル */
+            color: white;
+        }
 
+        .letters1,
+        .letters2,
+        .letters3 {
+            font-size: 24px;
+            line-height: 1.5;
+        }
 
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
         }
 
 
-        .nav_box_text {
+        .letters1 {
+            width: 550px;
+            color: white;
+            font-weight: bold;
+            margin: 0 0 0 0;
+            font-size: 40px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            background-color: #000080;
+            margin: 0 0 10px 30px;
+            padding: 0 0 0 20px;
+        }
+
+        .letters2 {
+            width: 550px;
+            color: black;
+            font-weight: bold;
+            margin: 0 0 0 30px;
+            font-size: 40px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            background-color: white;
+            padding: 0 0 0 20px;
+        }
+
+        .letters3 {
+            width: 450px;
+            color: white;
+            font-weight: bold;
+            margin: 0 0 5px 30px;
+            font-size: 28px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            padding: 20px 0 0 20px;
+
+        }
+
+        .se_cons {
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        .nav_box {
             position: fixed;
             top: 0;
             left: 0;
@@ -144,174 +163,192 @@
             margin: 0 10px 0 0;
         }
 
-        .nav_list {
-            list-style-type: none;
-            padding: 0 10px 0 0;
-        }
-
-        .nav_box {
-
-            border: 1px solid #d9d2d29d;
-            display: flex;
-        }
-
-        .nav_box_text {
+        .nav_box_list {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            display: flex;
-            /* flexbox を使用するために追加 */
-            justify-content: flex-end;
-            /* 右寄せにするために追加 */
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            list-style: none;
+        }
 
+        .with_dropdown .dropdown_menu {
+            width: 500px;
+            margin-top: 0;
+            padding: 5px 0 0 10px;
+            right: 0;
+            /* 画面の右端に配置 */
+            left: auto;
+            /* 左位置をリセット */
+            opacity: 0.5;
+            /* 透明度を指定（0に近いほど透明になる） */
+        }
+
+        .nav_items {
+            padding: 0 20px 0 0;
+            font-weight: bold;
+        }
+
+        .nav_items.with_dropdown:hover .dropdown_menu {
+            display: block;
+            /* 幅を500pxに指定 */
+            margin-top: 0;
+            padding: 5px 0 0 10px;
+            height: auto;
+            white-space: nowrap;
+            opacity: 0.9;
+        }
+
+
+        .nav_items a:hover {
+            color: inherit !important;
+            /* 継承された文字色を適用 */
+            text-decoration: none !important;
+            /* 下線を削除 */
+            border: none !important;
+            /* 枠を削除 */
+        }
+
+
+
+        .with_dropdown:hover .dropdown_menu {
+            display: block;
+            height: auto;
+            list-style: none;
+            opacity: 1;
+        }
+
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            /* 画面の右端に配置 */
+            padding: 0;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            white-space: nowrap;
+            width: 500px;
+            /* 幅を500pxに指定 */
+
+        }
+
+
+        .dropdown_menu li {
+            padding: 10px;
+            width: max-content;
+            /* リストアイテムの幅をコンテンツに合わせる */
+            list-style: none;
+        }
+
+
+        .nav_items.logo {
+            margin-right: auto;
+            /* Pushes the logo to the left */
         }
 
 
         .nav_list {
-            display: flex;
+            list-style-type: none;
+            border-bottom: none;
         }
 
-        .nav_items {
-            margin: 0 0 0 40px;
+        .nav_items.logo img {
+            width: 180px;
+            /* Adjust the width as needed */
+            height: auto;
+        }
+
+
+        .nav_items2 {
+            margin: 0 20px 0 20px;
             font-weight: bold;
-            color: #f0c20b;
+            list-style: none;
         }
 
-
-
-
-
-
-        .ab_box {
-            text-align: center;
-            padding: 0 0 0;
-            margin: auto;
+        .nav_items2 a {
+            text-decoration: none;
+            color: white;
         }
 
-
-
-        .ab_title {
-            font-size: 36px;
-            font-weight: bold;
-            color: black;
+        .contact_link {
             display: inline-block;
-            padding: 40px 0;
+            padding: 10px;
+            border-radius: 50% / 100%;
+            background-color: #191970;
+            color: white;
+        }
+
+        .nav_items a {
+            text-decoration: none;
         }
 
 
-        .ab_sub {
-            font-size: 36px;
-            font-weight: bold;
-            color: #f0c20b;
-            display: inline-block;
-            padding: 40px 20px;
-        }
-
-
-
-        .imgbox {
-            background: #f0c20b;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            padding: 20px 0 20px;
-        }
-
-        .imgbox img {
-            margin: auto;
-            width: 95%;
-            height: 95%;
-        }
-
-        /*---------------------------
-course*
------------------------------------*/
-
-
-        .co_title {
-            font-size: 36px;
-            font-weight: bold;
-            color: black;
-            display: inline-block;
-            padding: 40px 20px;
+        .seemoretop {
+            font-weight: none;
+            margin: 20px 0 0 0;
+            font-size: 14px;
 
         }
 
-
-        .co_wrapper {
-            max-width: 960px;
-            padding: 0 0 36px;
-            text-align: center;
-            margin: auto;
-        }
-
-        .co_img_box {
-            display: flex;
-        }
-
-        .co_img_box_img {
-            width: 50%;
-        }
-
-        .co_img_box_text {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            background: #f0c20b;
-            color: #ffffff;
-        }
-
-        .co_img_box_img img {
-            width: 100%;
-        }
-
-        .co_img_box_text div {
-            width: 80%;
-            text-align: center;
-            margin: auto;
+        .seemore {
+            position: relative;
             font-size: 18px;
         }
 
-
-
-        .background1 {
-            background-image: url(../img/new01.png);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            width: 1200px;
-            height: 500px;
-            color: black;
-            font-size: 24px;
-            padding: 80px 0 0 0px;
-            line-height: 4;
-            font-weight: bold;
-            margin: 0 0 20px;
+        .seemore::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            /* 矢印の位置を調整 */
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid black;
+            /* 矢印の色を調整 */
         }
 
-        .background2 {
+        .se_wrapper {
+            width: 1280px;
+            padding: 150px 0 50px 0;
+            margin: auto;
+            line-height: 1;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
 
-            background-image: url(../img/new02.jpg);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            width: 1200px;
-            height: 500px;
-            color: black;
-            font-size: 24px;
-            padding: 80px 0 0 0px;
-            line-height: 4;
-            font-weight: 100;
-            margin: 20px 20px;
+        .co_wrapper {
+            width: 1280px;
+            height: 480px;
+            background-color: #EEEEEE;
+            padding: 80px 0 10px 0;
+            text-align: center;
+            margin: auto;
+            font-size: 26px;
+            font-family: 'Heebo', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        }
+
+        .setit {
             font-weight: bold;
-            margin: 0 0 20px;
-
+            text-align: center;
         }
 
 
 
+        .nav_items:nth-child(4) a:hover {
+
+            border: 2px solid 000080;
+            background-color: white;
+            color: #000080;
+            border: 1px solid #000080;
+            ;
+        }
 
 
         .new_title {
@@ -326,26 +363,6 @@ course*
             margin: 0 0 20px;
             font-size: 24px;
             font-weight: bold;
-        }
-
-
-
-
-
-        .btn {
-            width: 214px;
-            background-color: #aaa;
-            color: #ffffff;
-            font-size: 21px;
-            display: block;
-            margin: auto;
-            padding: 20px 0 20px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background-color: black;
-            /* カーソルを合わせたときのスタイル */
         }
 
 
@@ -368,12 +385,6 @@ course*
             width: 33.333%;
             padding: 0 32px 0;
         }
-
-
-
-
-
-
 
 
 
@@ -412,10 +423,11 @@ course*
         }
 
         .ac_detail {
+
             font-size: 14px;
             padding: 20px 20px 0 25px;
             color: #ffffff;
-            margin: 0 0 20px 30px;
+            margin: 20px 0 20px 30px;
         }
 
         .ac_detail2 {
@@ -430,7 +442,7 @@ course*
         }
 
         .ac_table {
-            margin: auto;
+            padding: 10px 0 0 0;
         }
 
 
@@ -475,15 +487,7 @@ course*
 
         }
 
-        .us {
-            font-size: 40px;
-            font-weight: bold;
-            color: #f0c20b;
-            display: inline-block;
-            padding: 60px 0;
-            font-style: italic;
 
-        }
 
         .con_sub {
             margin: 0 0 20px;
@@ -551,9 +555,6 @@ course*
 
         }
 
-        input[type*="radio"]:checked {
-            background-color: #f0c20b;
-        }
 
         .btn-submit {
             border: non;
@@ -588,22 +589,6 @@ course*
         }
 
 
-        .btn-submit:hover {
-            background-color: black;
-            /* カーソルを合わせたときのスタイル */
-
-            cursor: url('/img/cheese.png') 15 0, auto;
-            color: #fff;
-        }
-
-
-
-        .us {
-            font-size: 48px;
-            color: #f0c20b;
-            animation: .8s shake infinite alternate;
-        }
-
 
 
 
@@ -635,7 +620,6 @@ footer*
 
         .btn-top {
             position: absolute;
-            top: -90px;
             right: 0;
             display: block;
             width: 60px;
@@ -648,12 +632,6 @@ footer*
 
 
         /* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
-
-
-
-
-
-
 
 
         span:nth-child(1) {
@@ -688,21 +666,57 @@ footer*
             width: 1280px;
             display: flex;
             justify-content: center;
-            margin: 0 0 150px 0;
+            margin: 0 0 0 0;
         }
 
-        .photo {
+        .photo1,
+        .photo2,
+        .photo3,
+        .photo4 {
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
             margin-right: 10px;
         }
 
-        .photo img {
+        .photo2 {
+            margin-top: 50px;
+        }
+
+        .photo3 {
+            margin-top: 100px;
+        }
+
+        .photo4 {
+            margin-top: 150px;
+        }
+
+        .photo-container2 {
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 0 0;
+        }
+
+        .photo5,
+        .photo6,
+        .photo7,
+        .photo8 {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-right: 10px;
+        }
+
+        .photo1 img,
+        .photo2 img,
+        .photo3 img,
+        .photo4 img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
 
         .caption {
             position: absolute;
@@ -720,41 +734,84 @@ footer*
             font-size: 18px;
         }
 
-        .photo:hover .caption {
+        .photo1:hover .caption,
+        .photo2:hover .caption,
+        .photo3:hover .caption,
+        .photo4:hover .caption {
             opacity: 1;
         }
 
-        .con_box {
-            width: 1280px;
-            height: 300px;
-            text-align: center;
+
+        .boxde {
+            font-size: 20px;
+            font-weight: bold;
+            color: #191970;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 10px 0 0 0;
+
+        }
+
+        .boxde2 {
             font-size: 16px;
-            background-color: #EEEEEE;
-            font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+            font-weight: bold;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 10px 0 0 0;
+        }
 
+        .boxdes {
+            font-size: 14px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
 
+        }
+
+        .boxdetit2 {
+            font-size: 10px;
+            font-weight: bold;
+            color: #191970;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
+        }
+
+        .boxdes2 {
+            font-size: 14px;
+            font-family: 'Heebo', 'Montserrat', sans-serif;
+            text-align: left;
+            margin: 5px 0 0 0;
         }
 
         .ac_box {
             width: 1280px;
+            height: 380px;
             font-size: 16px;
             text-align: left;
             background-color: #191970;
             font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-
         }
 
         .ac_tb {
+            height: 230px;
+            color: #ffffff;
             display: flex;
+            margin: 0 0 0 0;
         }
+
 
 
         .btm {
-            padding: 100px 50px 0 150px;
-            margin-right: 10px;
+            padding: 0 20px 0 0;
             border-right: 1px solid #fff;
             height: 150px;
+            width: 214px;
+            margin: 60px 0 0 260px;
+
         }
+
+
 
         .contact-container {
             display: flex;
@@ -778,6 +835,31 @@ footer*
             border: 1px solid black;
             /* カーソルが当たった時に枠線を表示する */
         }
+
+
+
+
+        .footer-002__list {
+            display: flex;
+            gap: 0 1.5em;
+            list-style-type: none;
+            margin: 20px 0 0 150px;
+
+
+        }
+
+        .footer-002__sns-icon {
+            width: 21px;
+            height: 21px;
+        }
+
+        .footer-002__copyright {
+            margin: 50px 30px 50px 0;
+            text-align: center;
+            color: #ffffffb3;
+            font-weight: 200;
+            font-size: .8em;
+        }
     </style>
 
 </head>
@@ -785,15 +867,31 @@ footer*
 <body>
 
     <header>
-        <div class="nav_box">
-
-            <nav class="nav_box_text">
-                <ul class="nav_list a image-box">
-                    <li class="nav_items"><a href="#PHILOSOPHY">PHILOSOPHY</a></li>
-                    <li class="nav_items"><a href="#SOLUTION">SOLUTION</a></li>
-                    <li class="nav_items"><a href="#news">NEWS</a></li>
-                    <li class="nav_items"><a href="#access">ACCESS</a></li>
-                    <li class="nav_items"><a href="#contact">CONTACT</a></li>
+        <div class="nav_box_wrapper">
+            <nav class="nav_box">
+                <ul class="nav_box_list">
+                    <li class="nav_items logo"><img src="img/logo.png" alt="Logo"></li>
+                    <li class="nav_items with_dropdown">
+                        <a href="#OURSERVICES">Our services</a>
+                        <ul class="dropdown_menu">
+                            <li><a href="#OURSERVICES">MVV策定/インナーブランディング支援</a></li>
+                            <li><a href="#OURSERVICES">人事戦略策定・運用支援</a></li>
+                            <li><a href="#OURSERVICES">社内大学構築・企業内研修実施</a></li>
+                            <li><a href="#OURSERVICES">スタートアップ人事支援</a></li>
+                            <li><a href="ourservices.html" class="seemoretop">see more</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_items with_dropdown">
+                        <a href="#SOLUTION">About</a>
+                        <ul class="dropdown_menu">
+                            <li><a href="aboutus.html">会社概要</a></li>
+                            <li><a href="aboutus.html">MVV</a></li>
+                            <li><a href="aboutus.html">代表挨拶</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_items"><a href="#COLUM">Colum</a></li>
+                    <li class="nav_items2 contact_link"><a href="#CONTACTUS">Contact us</a></li>
+                    <li class="nav_items"><a href="#CONTACT">English(US)</a></li>
                 </ul>
             </nav>
         </div>
@@ -801,108 +899,180 @@ footer*
         <!--top-->
 
         <div class="efe">
-            <p class="letters">HUMAN RESORCES CONSULTING</p>
-            <p class="logo">HR DESIGN</p>
-
-        </div>
-
-
-        <!--nav-->
-
+            <video src="img/mainmovie.mp4" autoplay loop muted></video>
+            <p class="letters1">Enough with Unrealistic,</p>
+            <p class="letters2">Consultancy bulls*!t </p>
+            <p class="letters3">Choose a partner who can do more than just criticism.</p>
         </div>
     </header>
 
 
 
-
-
-
-
     <main>
-        <!--about-->
-        <div id="PHILOSOPHY">
-            <div class="ab_wrapper">
-                <p>PHILOSOPHY</p>
-                <p class="ab_con">企業と人をデザインする</p>
-                <P class="ab_cons">
-                    HR DESIGN（エイチアールデザイン）は、組織と人のパフォーマンスを高めるための挑戦をクライアントと共に行っています。<br>
-                    「経営の想い」と「従業員の想い」の結びつきは、～</p>
+        <div id="OURSERVICES" class="se_wrapper">
+            <div class="se_wrapper2">
+                <p class="setit">Our services</p>
+                <P class="se_cons">
+                    HR DESIGN（エイチアールデザイン）は、組織と人のパフォーマンスを高めるための挑戦をクライアントと共に行っています。</P>
             </div>
-        </div>
-
-
-        <!--news-->
-        <div id="SOLUTION" class="">
-            <div class="ab_wrapper2">
-                <p>SOLUTION</p>
-            </div>
-
-
-
 
             <div class="photo-container">
-                <div class="photo">
+                <div class="photo1">
                     <img src="img/news_img.jpg" alt="Photo 1">
-                    <div class="caption">MVV策定支援</div>
+                    <div class="caption">MVV策定/<br>インナーブランディング支援</div>
+                    <a href="ourservices.html" class="boxde">MVVの策定リニューアル<br>～施策へのブレークダウン</a>
+                    <p class="boxdes">ミッション・ビジョン・バリューの策定とそれらの戦略・制度までのブレークダウンの支援を行います。策定後形骸化したMVVの運用支援も行います。</p>
                 </div>
-                <div class="photo">
-                    <img src="img/news_img.jpg" alt="Photo 2">
-                    <div class="caption">人事戦略策定支援</div>
+                <div class="photo2">
+                    <img src="img/news_img3.jpg" alt="Photo 2">
+                    <div class="caption">人事戦略策定・運用支援</div>
+                    <a href="ourservices.html" class="boxde">人事戦略を策定し、人事制度との整合を</a>
+                    <p class="boxdes">経営戦略に紐付いた運用ハードルの低い効果的な人事戦略・人事制度を策定し、運用の支援まで行います。</p>
                 </div>
-                <div class="photo">
-                    <img src="img/news_img.jpg" alt="Photo 1">
-                    <div class="caption">社内大学構築</div>
+                <div class="photo3">
+                    <img src="img/news_img2.jpg" alt="Photo 1">
+                    <div class="caption">社内大学構築/<br>企業内研修実施</div>
+                    <a href="ourservices.html" class="boxde">教育の体系化</a>
+                    <p class="boxdes">戦略実行に必要な人財育成支援を行います。社内大学構築から階層別の研修企画・登壇までを行います。</p>
                 </div>
-                <div class="photo">
-                    <img src="img/news_img.jpg" alt="Photo 2">
-                    <div class="caption">企業内研修</div>
-                </div>
-                <div class="photo">
-                    <img src="img/news_img.jpg" alt="Photo 2">
-                    <div class="caption">スタートアップ人事立ち上げ支援</div>
+                <div class="photo4">
+                    <img src="img/news_img4.jpg" alt="Photo 2">
+                    <div class="caption">スタートアップ人事支援</div>
+                    <a href="ourservices.html" class="boxde">人事セクション立ち上げ</a>
+                    <p class="boxdes">MVV策定から、採用・評価・育成を一気通貫で行い、人事業務の代行または人事セクションの立ち上げ支援を行います。</p>
+                    <a href="ourservices.html" class="seemore">see more</a>
                 </div>
             </div>
-
         </div>
 
 
 
 
 
-        <div id="CONTACT" class="con_box">
-            <p>CONTACT</p>
-            <p>メールでのご相談・お問合せ</p>
-            <p>お問合せは以下のリンクフォームよりお気軽にご連絡ください。</p>
-            <div class="contact-container">
-                <div class="contact-box">CONTACT</div>
+
+        <div id="CONTACT" class="se_wrapper">
+            <div class="se_wrapper2">
+                <p class="setit">Contact us</p>
+                <P class="se_cons">
+                    HR メールでのご相談・お問合せ</P>
+
+                <p class="se_cons">お問合せは以下のリンクフォームよりお気軽にご連絡ください。</p>
+                <div class="contact-container">
+                    <div class="contact-box">CONTACT</div>
+                </div>
+                <p class="se_cons">お電話でのお問合せ</p>
+                <div class="contact-container">
+                    <div class="contact-box">TEL</div>
+                </div>
             </div>
-            <p>お電話でのお問合せ</p>
-            <div class="contact-container">
-                <div class="contact-box">TEL</div>
+        </div>
+
+        <div id="COLUM" class="co_wrapper">
+            <div class="">
+                <p class="setit">Column</p>
+                <div class="photo-container2">
+                    <div class="photo5">
+                        <img src="img/colum.jpeg" alt="Photo 1">
+                        <p class="boxdetit2">＃キャリア自律</p>
+                        <p class="boxde2">キャリア自律時代の管理職のあるべき姿</p>
+                        <p class="boxdes2">キャリア自律の重要性が囁かれる近年、管理職としてのあるべき姿像も変化を遂げようとしている・・・＜続き＞</p>
+                    </div>
+                    <div class="photo6">
+                        <img src="img/colum2.jpg" alt="Photo 2">
+                        <p class="boxdetit2">＃MVV</p>
+                        <p class="boxde2">企業倫理と業績をトレードオフにさせないためのMVVの作り方</p>
+                        <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                    </div>
+                    <div class="photo7">
+                        <img src="img/colum4.jpeg" alt="Photo 1">
+                        <p class="boxdetit2">#チームビルディング</p>
+                        <p class="boxde2">スクラムチームビルディングでチームのエンゲージメントを向上</p>
+                        <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                    </div>
+                    <div class="photo7">
+                        <img src="img/colum3.jpeg" alt="Photo 1">
+                        <p class="boxdetit2">＃DX</p>
+                        <p class="boxde2">DX時代に必要なリスキリング</p>
+                        <p class="boxdes2">2023年６月から大手企業の人的資本開示がスタートすることにより、企業の資本の在り方が変わろ・・・＜続き＞</p>
+                        <a href="" class="seemore">see more</a>
+
+                    </div>
+
+
+                </div>
             </div>
-
-
-
-
-
+        </div>
         </div>
 
 
 
+        <script>
 
+            document.addEventListener('DOMContentLoaded', function () {
+                var dropdowns = document.querySelectorAll('.with_dropdown');
+
+                dropdowns.forEach(function (dropdown) {
+                    var link = dropdown.querySelector('a');
+                    var menu = dropdown.querySelector('.dropdown_menu');
+                    var isHovered = false;
+
+                    link.addEventListener('mouseenter', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        isHovered = true;
+                        showMenu();
+                    });
+
+                    link.addEventListener('mouseleave', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        isHovered = false;
+                        setTimeout(hideMenu, 200); // メニューがマウスから外れた場合に遅延してメニューを非表示にする
+                    });
+
+                    menu.addEventListener('mouseenter', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        isHovered = true;
+                        showMenu();
+                    });
+
+                    menu.addEventListener('mouseleave', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        isHovered = false;
+                        setTimeout(hideMenu, 200); // メニューがマウスから外れた場合に遅延してメニューを非表示にする
+                    });
+
+                    function showMenu() {
+                        if (isHovered) {
+                            menu.style.display = 'block';
+                        }
+                    }
+
+                    function hideMenu() {
+                        if (!isHovered) {
+                            menu.style.display = 'none';
+                        }
+                    }
+                });
+            });
+
+
+        </script>
 
     </main>
 
 
 </body>
 
-<footer class="footer">
+<footer class="footer footer-002">
     <!--access-->
     <div>
 
         <div id="access" class="ac_box">
 
-            <div class="ac_tb ac_detail">
+            <div class="ac_tb">
 
                 <div class="btm">
                     <p>ABOUT US</p>
@@ -912,7 +1082,7 @@ footer*
                 </div>
 
 
-                <table class="ac_detail">
+                <table id="COMPANY" class="ac_detail">
                     <tbody class="ac_detail2">
                         <tr>
                             <td>HR DESIGN INC.<br>（エイチアールデザイン株式会社）</td>
@@ -932,9 +1102,59 @@ footer*
                         </tr>
                     </tbody>
 
+
+
                 </table>
 
             </div>
+
+
+            <nav>
+                <ul class="footer-002__list">
+                    <li>
+                        <a href="#">
+                            <svg class="footer-002__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="footer-002__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="footer-002__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="footer-002__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="footer-002__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="footer-002__copyright">@ 2023 HR DESIGN INC. All rights reserved.</p>
+
 </footer>
 
 
